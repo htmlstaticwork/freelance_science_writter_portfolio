@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCI | Premium Science Writing Portfolio</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .hero-premium {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: radial-gradient(circle at 80% 20%, rgba(13, 148, 136, 0.15), transparent),
+                        radial-gradient(circle at 20% 80%, rgba(13, 148, 136, 0.05), transparent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-premium::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            filter: blur(150px);
+            opacity: 0.1;
+            top: -100px;
+            right: -100px;
+            z-index: 0;
+        }
+
+        .stat-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="brand">SCI</a>
+            
+            <nav class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="index.html" class="nav-dropbtn active">Home <i data-lucide="chevron-down" size="16"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="index.html">Home 1 (Standard)</a>
+                        <a href="index2.html">Home 2 (Premium)</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="articles.html">Articles</a>
+                <a href="publications.html">Publications</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="rtl-toggle" aria-label="Toggle RTL View">
+                    <i data-lucide="languages"></i>
+                </button>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign up</a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Premium Hero Section -->
+    <section class="hero-premium">
+        <div class="container">
+            <div class="grid-2" style="align-items: center; gap: 4rem;">
+                <div class="hero-content" style="text-align: left; align-items: flex-start;">
+                    <span class="text-secondary fw-600 mb-2 d-inline-block">PREMIUM EDITORIAL SERVICES</span>
+                    <h1 class="text-gradient" style="font-size: 4rem; line-height: 1.1;">Science told <br>through stories.</h1>
+                    <p class="mb-4" style="font-size: 1.25rem;">We bridge the gap between complex research and public engagement. Specialized in high-impact journalism for biology, space, and tech.</p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-primary">Start a Project</a>
+                        <a href="#featured" class="btn btn-outline">View Portfolio</a>
+                    </div>
+                </div>
+                <div class="hero-image floating-anim">
+                    <div class="glass-card" style="padding: 1rem; border-radius: 20px;">
+                        <img src="../assets/images/premium_hero.png" alt="Science Writing Workspace" style="border-radius: 12px; display: block;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- As Seen In (New Content 1) -->
+    <div style="background-color: var(--bg-color); padding: 2rem 0; border-bottom: 1px solid var(--border-color); opacity: 0.8;">
+        <div class="container">
+            <div class="flex-center" style="gap: 4rem; flex-wrap: wrap; justify-content: center;">
+                <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: var(--text-muted); letter-spacing: 2px;">NATURE</span>
+                <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: var(--text-muted); letter-spacing: 2px;">WIRED</span>
+                <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: var(--text-muted); letter-spacing: 2px;">BBC SCIENCE</span>
+                <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: var(--text-muted); letter-spacing: 2px;">SCIENTIFIC AMERICAN</span>
+                <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: var(--text-muted); letter-spacing: 2px;">QUANTA</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="section" style="background-color: var(--bg-secondary); border-bottom: 1px solid var(--border-color);">
+        <div class="container">
+            <div class="grid-4">
+                <div class="stat-card">
+                    <span class="stat-number">12+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Articles Published</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15M+</span>
+                    <span class="stat-label">Global Readers</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">25</span>
+                    <span class="stat-label">Industry Awards</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Featured Section -->
+    <section id="featured" class="section">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.5rem;">Selected Features</h2>
+                <p class="text-muted">High-impact coverage of groundbreaking discoveries.</p>
+            </div>
+            <div class="grid-3">
+                <!-- Article 1 -->
+                <article class="card-article glass-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800" alt="Space Feature">
+                    </div>
+                    <div class="card-content" style="text-align: center;">
+                        <span class="text-secondary fw-500 mb-1 d-block">SPACE EXPLORATION</span>
+                        <h3 class="mb-2"><a href="#">The Silent Giants: Probing Deep Space Neutrinos</a></h3>
+                        <p class="text-muted mb-3">How underground observatories are catching glimpses of the universe's most elusive particles.</p>
+                        <a href="#" class="read-more" style="justify-content: center;">Full Article <i data-lucide="external-link" size="14"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="card-article glass-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&q=80&w=800" alt="Bio Feature">
+                    </div>
+                    <div class="card-content" style="text-align: center;">
+                        <span class="text-secondary fw-500 mb-1 d-block">BIOTECHNOLOGY</span>
+                        <h3 class="mb-2"><a href="#">CRISPR 2.0: The Next Frontier in Genetic Editing</a></h3>
+                        <p class="text-muted mb-3">A deep dive into the precision tools reshaping our medical and agricultural future.</p>
+                        <a href="#" class="read-more" style="justify-content: center;">Full Article <i data-lucide="external-link" size="14"></i></a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="card-article glass-card">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&q=80&w=800" alt="Tech Feature">
+                    </div>
+                    <div class="card-content" style="text-align: center;">
+                        <span class="text-secondary fw-500 mb-1 d-block">QUANTUM COMPUTING</span>
+                        <h3 class="mb-2"><a href="#">Qubits & Consequences: Decoding Quantum Supremacy</a></h3>
+                        <p class="text-muted mb-3">Understanding the machine that could solve humanity's most complex problems in seconds.</p>
+                        <a href="#" class="read-more" style="justify-content: center;">Full Article <i data-lucide="external-link" size="14"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Writing Process (New Content 2) -->
+    <section class="section" style="background-color: var(--bg-secondary);">
+        <div class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2.5rem;">The Scientific Storytelling Process</h2>
+                <p class="text-muted">How I transform complex data into compelling narrative.</p>
+            </div>
+            <div class="grid-4">
+                <div class="glass-card stat-card" style="padding: 3rem 1.5rem;">
+                    <div class="topic-icon" style="margin: 0 auto 1.5rem; background: rgba(13, 148, 136, 0.1); color: var(--secondary); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="search" size="24"></i>
+                    </div>
+                    <h3 style="font-size: 1.2rem;">01. Deep Research</h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">Immersing in peer-reviewed journals and interviewing primary researchers.</p>
+                </div>
+                <div class="glass-card stat-card" style="padding: 3rem 1.5rem;">
+                    <div class="topic-icon" style="margin: 0 auto 1.5rem; background: rgba(13, 148, 136, 0.1); color: var(--secondary); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="layers" size="24"></i>
+                    </div>
+                    <h3 style="font-size: 1.2rem;">02. Synthesis</h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">Distilling technical jargon into human-centric themes and narratives.</p>
+                </div>
+                <div class="glass-card stat-card" style="padding: 3rem 1.5rem;">
+                    <div class="topic-icon" style="margin: 0 auto 1.5rem; background: rgba(13, 148, 136, 0.1); color: var(--secondary); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="feather" size="24"></i>
+                    </div>
+                    <h3 style="font-size: 1.2rem;">03. Storytelling</h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">Crafting editorial-quality prose that educates and inspires readers.</p>
+                </div>
+                <div class="glass-card stat-card" style="padding: 3rem 1.5rem;">
+                    <div class="topic-icon" style="margin: 0 auto 1.5rem; background: rgba(13, 148, 136, 0.1); color: var(--secondary); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="zap" size="24"></i>
+                    </div>
+                    <h3 style="font-size: 1.2rem;">04. Impact</h3>
+                    <p class="text-muted" style="font-size: 0.9rem;">Bridging the gap between the lab and the public imagination.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Standardized) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="brand">SCI</h3>
+                    <p style="color: #94a3b8; margin-top: 1rem; max-width: 300px;">Freelance science writer and editor bridging the gap between scientific discovery and public understanding.</p>
+                </div>
+                <div>
+                    <h4 class="mb-2">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="articles.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="mb-2">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">ResearchGate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="mb-2">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SCI All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

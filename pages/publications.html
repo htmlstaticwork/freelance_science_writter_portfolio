@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications | SCI</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .pub-row {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            padding: 2.5rem 2rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+            border-radius: 12px;
+            cursor: pointer;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        html.dark-mode .pub-row {
+            background: rgba(255, 255, 255, 0.02);
+            border-color: rgba(255, 255, 255, 0.05);
+        }
+        .pub-row:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary);
+            box-shadow: 0 20px 40px rgba(13, 148, 136, 0.15);
+        }
+        html.dark-mode .pub-row:hover {
+            background: rgba(13, 148, 136, 0.05);
+        }
+        @media (max-width: 768px) {
+            .pub-row { grid-template-columns: 1fr; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="brand">SCI</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="articles.html">Articles</a>
+                <a href="publications.html" class="active">Publications</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode"><i data-lucide="moon"></i></button>
+                <button class="rtl-toggle" aria-label="Toggle RTL View"><i data-lucide="languages"></i></button>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign up</a>
+                <button class="mobile-menu-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1>Featured Publications</h1>
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Where my work has been featured in the scientific community.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="pub-row">
+                <div class="pub-date">
+                    <h3 style="font-family: var(--font-heading); color: var(--primary);">NATURE<br>JOURNAL</h3>
+                </div>
+                <div>
+                    <h3><a href="#" style="color: var(--primary);">Mechanisms of genetic expression in deep-sea extremophiles</a></h3>
+                    <p class="text-muted mb-2">Published: October 2025 • Volume 642</p>
+                    <p>Co-authored peer-reviewed research analyzing transcription variations near hydrothermal vents.</p>
+                </div>
+            </div>
+            <div class="pub-row">
+                <div class="pub-date">
+                    <h3 style="font-family: var(--font-heading); color: var(--primary);">SCIENCE<br>DAILY</h3>
+                </div>
+                <div>
+                    <h3><a href="#" style="color: var(--primary);">The role of Artificial Intelligence in predictive protein folding</a></h3>
+                    <p class="text-muted mb-2">Published: March 2025</p>
+                    <p>Long-form investigative piece covering the breakthrough algorithms changing molecular biology.</p>
+                </div>
+            </div>
+            <div class="pub-row">
+                <div class="pub-date">
+                    <h3 style="font-family: var(--font-heading); color: var(--primary);">WIRED<br>INSIGHTS</h3>
+                </div>
+                <div>
+                    <h3><a href="#" style="color: var(--primary);">When quantum computers break RSA: A timeline</a></h3>
+                    <p class="text-muted mb-2">Published: August 2024</p>
+                    <p>Detailed analysis of the looming cryptography crisis and potential post-quantum solutions.</p>
+                </div>
+            </div>
+            <div class="pub-row">
+                <div class="pub-date">
+                    <h3 style="font-family: var(--font-heading); color: var(--primary);">SPACE &<br>TIME</h3>
+                </div>
+                <div>
+                    <h3><a href="#" style="color: var(--primary);">Dark matter mapping techniques refined by new satellite array</a></h3>
+                    <p class="text-muted mb-2">Published: January 2024</p>
+                    <p>Cover story detailing the optical technologies deployed on the latest orbital observatory.</p>
+                </div>
+            </div>
+            <div class="pub-row">
+                <div class="pub-date">
+                    <h3 style="font-family: var(--font-heading); color: var(--primary);">NATURE<br>MEDICINE</h3>
+                </div>
+                <div>
+                    <h3><a href="#" style="color: var(--primary);">Clinical trials approach for novel mRNA therapies</a></h3>
+                    <p class="text-muted mb-2">Published: November 2023</p>
+                    <p>An extensive review of safety protocols and efficacy markers in next-generation gene therapies.</p>
+                </div>
+            </div>
+            <div class="pub-row">
+                <div class="pub-date">
+                    <h3 style="font-family: var(--font-heading); color: var(--primary);">SCIENTIFIC<br>AMERICAN</h3>
+                </div>
+                <div>
+                    <h3><a href="#" style="color: var(--primary);">Decoding the language of the human microbiome</a></h3>
+                    <p class="text-muted mb-2">Published: June 2023</p>
+                    <p>A deep investigation into how gut bacteria synthesis affects neurological development and mood disorders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="brand">SCI</h3>
+                    <p style="color: #94a3b8; margin-top: 1rem; max-width: 300px;">Freelance science writer and editor bridging the gap between scientific discovery and public understanding.</p>
+                </div>
+                <div>
+                    <h4 class="mb-2">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="articles.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="mb-2">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">ResearchGate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="mb-2">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SCI All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

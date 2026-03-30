@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles | SCI | Science Writer</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="brand">SCI</a>
+            
+            <nav class="nav-links">
+                <div class="nav-dropdown">
+                    <a href="index.html" class="nav-dropbtn">Home <i data-lucide="chevron-down" size="16"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="index.html">Home 1 (Standard)</a>
+                        <a href="index2.html">Home 2 (Premium)</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="articles.html" class="active">Articles</a>
+                <a href="publications.html">Publications</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="rtl-toggle" aria-label="Toggle RTL View">
+                    <i data-lucide="languages"></i>
+                </button>
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign up</a>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1>Published Articles</h1>
+            <p class="text-muted" style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">A comprehensive archive of my works across major scientific disciplines.</p>
+        </div>
+    </section>
+
+    <!-- Articles Grid Section -->
+    <section class="section">
+        <div class="container">
+            <!-- Filter Buttons -->
+            <div class="filter-group" style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap; justify-content: center;">
+                <button class="btn btn-primary filter-btn" data-filter="all" style="transition: var(--transition);">All Topics</button>
+                <button class="btn btn-outline filter-btn" data-filter="biology" style="transition: var(--transition);">Biology</button>
+                <button class="btn btn-outline filter-btn" data-filter="space" style="transition: var(--transition);">Space</button>
+                <button class="btn btn-outline filter-btn" data-filter="technology" style="transition: var(--transition);">Technology</button>
+                <button class="btn btn-outline filter-btn" data-filter="environment" style="transition: var(--transition);">Environment</button>
+            </div>
+
+            <div class="grid-3" style="margin-bottom: 3rem;" id="articles-grid">
+                <!-- Card 1 -->
+                <article class="card-article article-item" data-category="biology">
+                    <img src="https://images.unsplash.com/photo-1530026405186-ed1f139313f8?auto=format&fit=crop&q=80&w=600" alt="Genetic engineering" class="card-image">
+                    <div class="card-content" style="text-align: center;">
+                        <span class="card-meta">Biology • Nature Journal</span>
+                        <h3 class="card-title"><a href="#">The Future of CRISPR in Modern Agriculture</a></h3>
+                        <p class="card-desc">Exploring how targeted gene editing is paving the way for drought-resistant crops and sustainable farming practices.</p>
+                        <a href="#" class="read-more" style="justify-content: center;">Read Full Text <i data-lucide="arrow-right" size="16"></i></a>
+                    </div>
+                </article>
+                <!-- Card 2 -->
+                <article class="card-article article-item" data-category="space">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=600" alt="Space tech" class="card-image">
+                    <div class="card-content" style="text-align: center;">
+                        <span class="card-meta">Space • SciAm</span>
+                        <h3 class="card-title"><a href="#">Next Generation Telescopes Peering Closer to the Big Bang</a></h3>
+                        <p class="card-desc">An in-depth look at the upcoming array of orbital observatories slated to replace the James Webb era.</p>
+                        <a href="#" class="read-more" style="justify-content: center;">Read Full Text <i data-lucide="arrow-right" size="16"></i></a>
+                    </div>
+                </article>
+                <!-- Card 3 -->
+                <article class="card-article article-item" data-category="technology">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600" alt="Technology motherboard" class="card-image">
+                    <div class="card-content" style="text-align: center;">
+                        <span class="card-meta">Tech • Wired Insights</span>
+                        <h3 class="card-title"><a href="#">Quantum Computing's Impact on Data Security</a></h3>
+                        <p class="card-desc">We decode the complex world of quantum cryptography and why current RSA encryption algorithms might become obsolete.</p>
+                        <a href="#" class="read-more" style="justify-content: center;">Read Full Text <i data-lucide="arrow-right" size="16"></i></a>
+                    </div>
+                </article>
+                <!-- Card 4 -->
+                <article class="card-article article-item" data-category="environment">
+                    <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&q=80&w=600" alt="Climate science" class="card-image">
+                    <div class="card-content" style="text-align: center;">
+                        <span class="card-meta">Environment • Eco Future</span>
+                        <h3 class="card-title"><a href="#">The Hidden Mechanics of Deep Ocean Currents</a></h3>
+                        <p class="card-desc">How shifting underwater currents dictate global weather patterns and what happens when they slow down.</p>
+                        <a href="#" class="read-more" style="justify-content: center;">Read Full Text <i data-lucide="arrow-right" size="16"></i></a>
+                    </div>
+                </article>
+                <!-- Card 5 -->
+                <article class="card-article article-item" data-category="biology">
+                    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?auto=format&fit=crop&q=80&w=600" alt="Medicine" class="card-image">
+                    <div class="card-content" style="text-align: center;">
+                        <span class="card-meta">Biology • Science Daily</span>
+                        <h3 class="card-title"><a href="#">mRNA Vaccines: Beyond Viral Pandemics</a></h3>
+                        <p class="card-desc">Researchers are now modifying mRNA technology to target cancer cells and autoimmune disorders previously thought untreatable.</p>
+                        <a href="#" class="read-more" style="justify-content: center;">Read Full Text <i data-lucide="arrow-right" size="16"></i></a>
+                    </div>
+                </article>
+                <!-- Card 6 -->
+                <article class="card-article article-item" data-category="space">
+                    <img src="https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?auto=format&fit=crop&q=80&w=600" alt="Mars rover" class="card-image">
+                    <div class="card-content" style="text-align: center;">
+                        <span class="card-meta">Space • Aerospace Mag</span>
+                        <h3 class="card-title"><a href="#">The Geology of Mars' Jezero Crater</a></h3>
+                        <p class="card-desc">Analyzing the latest soil samples returned from the red planet and what they signify for past microbial life.</p>
+                        <a href="#" class="read-more" style="justify-content: center;">Read Full Text <i data-lucide="arrow-right" size="16"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="brand">SCI</h3>
+                    <p style="color: #94a3b8; margin-top: 1rem; max-width: 300px;">Freelance science writer and editor bridging the gap between scientific discovery and public understanding.</p>
+                </div>
+                <div>
+                    <h4 class="mb-2">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                        <li><a href="articles.html">Portfolio</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="mb-2">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">ResearchGate</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="mb-2">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SCI All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
