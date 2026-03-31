@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | SCI</title>
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,8 +29,73 @@
 
         .form-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(13, 148, 136, 0.1);
+            box-shadow: 0 20px 40px rgba(13, 148, 136, 0.15);
             border-color: var(--secondary);
+        }
+
+        /* Info Cards */
+        .info-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: var(--transition);
+            margin-bottom: 1.5rem;
+        }
+
+        .info-card:hover {
+            transform: translateX(10px);
+            border-color: var(--secondary);
+            background-color: var(--bg-color);
+            box-shadow: 0 10px 25px rgba(13, 148, 136, 0.1);
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background-color: rgba(13, 148, 136, 0.1);
+            color: var(--secondary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+
+        .info-card:hover .info-icon {
+            background-color: var(--secondary);
+            color: #fff;
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .info-content h3 {
+            font-size: 1.125rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-content p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 992px) {
+            .contact-info {
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+            .info-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 1rem;
+            }
+            .info-card:hover {
+                transform: translateY(-5px);
+            }
         }
     </style>
 </head>
@@ -38,7 +104,7 @@
     <!-- Header -->
     <header class="header">
         <div class="container navbar">
-            <a href="index.html" class="brand">SCI</a>
+            <a href="index.html" class="brand"><img src="assets/images/logo.svg" alt="Logo" class="brand-logo"> SCI</a>
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
@@ -46,6 +112,8 @@
                 <a href="publications.html">Publications</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html" class="active">Contact</a>
+            <a href="login.html" class="mobile-only">Login</a>
+                <a href="signup.html" class="mobile-only">Sign up</a>
             </nav>
             <div class="nav-actions">
                 <button class="theme-toggle" aria-label="Toggle Dark Mode"><i data-lucide="moon"></i></button>
@@ -68,21 +136,33 @@
 
     <section class="section">
         <div class="container grid-2">
-            <div>
+            <div class="contact-info">
                 <h2 class="mb-3">Get In Touch</h2>
                 <p class="mb-4 text-muted">Please reach out with details about your project, timeline, and budget. I
                     will get back to you within 24-48 hours.</p>
-                <div class="mb-3">
-                    <h3 style="font-size: 1.25rem;">Email Address</h3>
-                    <p class="text-muted"><a href="mailto:contact@janedoe-science.com"
-                            style="color: var(--secondary);">contact@janedoe-science.com</a></p>
-                </div>
-                <div class="mb-4">
-                    <h3 style="font-size: 1.25rem;">Agent Representation</h3>
-                    <p class="text-muted">Sarah Literature Agency<br><a href="mailto:sarah@literary.com"
-                            style="color: var(--secondary);">sarah@literary.com</a></p>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Email Address</h3>
+                        <p><a href="mailto:contact@janedoe-science.com"
+                                style="color: var(--secondary);">contact@janedoe-science.com</a></p>
+                    </div>
                 </div>
 
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <div class="info-content">
+                        <h3>Agent Representation</h3>
+                        <p class="text-muted">Sarah Literature Agency<br>
+                            <a href="mailto:sarah@literary.com" style="color: var(--secondary);">sarah@literary.com</a>
+                        </p>
+                    </div>
+                </div>
             </div>
 
             <div class="form-card">
@@ -117,12 +197,30 @@
         </div>
     </section>
 
+    <!-- Map Section -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <h2 class="mb-3">Our Location</h2>
+            <div style="width: 100%; height: 400px; border-radius: 12px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.2527998698!2d-74.1444878!3d40.6974034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1692285148679!5m2!1sen!2s" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div>
-                    <h3 class="brand">SCI</h3>
+                    <a href="index.html" class="brand"><img src="assets/images/logo.svg" alt="Logo" class="brand-logo"> SCI</a>
                     <p style="color: #94a3b8; margin-top: 1rem; max-width: 300px;">Freelance science writer and editor
                         bridging the gap between scientific discovery and public understanding.</p>
                 </div>
@@ -139,9 +237,9 @@
                     <h4 class="mb-2">Connect</h4>
                     <ul class="footer-links">
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                        <li><a href="#">ResearchGate</a></li>
+                        <li><a href="#" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="facebook" size="18"></i> Facebook</a></li>
+                        <li><a href="#" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="twitter" size="18"></i> Twitter</a></li>
+                        <li><a href="#" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="instagram" size="18"></i> Instagram</a></li>
                     </ul>
                 </div>
                 <div>

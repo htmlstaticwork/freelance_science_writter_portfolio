@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up | SCI</title>
+    <link rel="icon" href="assets/images/logo.svg" type="image/svg+xml">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,6 +54,14 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+        }
+
+        .auth-box-logo img {
+            height: 24px;
+            width: auto;
+            margin-right: 8px;
         }
 
         .auth-box-toggles {
@@ -151,7 +160,7 @@
         <div class="container">
             <div class="auth-container">
                 <div class="auth-box-utils">
-                    <a href="index.html" class="auth-box-logo">SCI</a>
+                    <a href="index.html" class="auth-box-logo"><img src="assets/images/logo.svg" alt="Logo"> SCI</a>
                     <div class="auth-box-toggles">
                         <button class="rtl-toggle" aria-label="Toggle RTL View"><i data-lucide="languages"></i></button>
                         <button class="theme-toggle" aria-label="Toggle Dark Mode"><i data-lucide="moon"></i></button>

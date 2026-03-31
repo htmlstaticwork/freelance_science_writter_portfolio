@@ -175,6 +175,14 @@ img {
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--primary);
+  display: flex;
+  align-items: center;
+}
+
+.brand-logo {
+  height: 32px;
+  width: auto;
+  margin-right: 8px;
 }
 
 /* Dropdown Menu */
@@ -448,6 +456,8 @@ html.dark-mode .glass-card {
   flex: 1;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
 .card-meta {
@@ -604,6 +614,11 @@ html.dark-mode .glass-card {
   padding: 5rem 0 2rem;
 }
 
+.footer .brand {
+  display: inline-flex;
+  color: #fff;
+}
+
 .footer h3,
 .footer h4 {
   color: #fff;
@@ -754,6 +769,10 @@ textarea.form-control {
   min-height: 120px;
 }
 
+.mobile-only {
+  display: none !important;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .hero {
@@ -773,6 +792,12 @@ textarea.form-control {
   .grid-3,
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 > *:nth-child(3):last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 1rem);
   }
 
   .footer-grid {
@@ -809,12 +834,32 @@ textarea.form-control {
     display: block;
   }
 
+  .mobile-only {
+    display: flex !important;
+  }
+
   .grid-2 {
     grid-template-columns: 1fr;
   }
 
+  .hero-premium .grid-2 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
   .hero-content h1 {
     font-size: 2.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
   }
 }
 
