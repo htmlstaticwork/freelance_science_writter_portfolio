@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | SCI</title>
+    <title>Sign Up | SCI</title>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <!-- CSS -->
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
     <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -20,14 +23,16 @@
             background-color: var(--bg-secondary);
             padding: 3rem 2.5rem;
             border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
             position: relative;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .auth-container:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 50px rgba(0,0,0,0.12);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
         }
+
         .auth-box-utils {
             display: flex;
             justify-content: flex-end;
@@ -38,6 +43,7 @@
             position: relative;
             min-height: 40px;
         }
+
         .auth-box-logo {
             font-family: var(--font-heading);
             font-size: 1.25rem;
@@ -48,23 +54,28 @@
             left: 50%;
             transform: translateX(-50%);
         }
+
         .auth-box-toggles {
             display: flex;
             gap: 0.5rem;
         }
+
         .auth-header {
             text-align: center;
             margin-bottom: 2rem;
         }
+
         .auth-header h1 {
             font-size: 2rem;
             margin-bottom: 0.5rem;
         }
+
         .auth-footer {
             text-align: center;
             margin-top: 1.5rem;
             font-size: 0.95rem;
         }
+
         .auth-divider {
             display: flex;
             align-items: center;
@@ -73,22 +84,28 @@
             color: var(--text-muted);
             font-size: 0.875rem;
         }
-        .auth-divider::before, .auth-divider::after {
+
+        .auth-divider::before,
+        .auth-divider::after {
             content: "";
             flex: 1;
             border-bottom: 1px solid var(--border-color);
         }
+
         .auth-divider:not(:empty)::before {
             margin-right: .75rem;
         }
+
         .auth-divider:not(:empty)::after {
             margin-left: .75rem;
         }
+
         .social-auth {
             display: flex;
             gap: 1rem;
             margin-top: 1rem;
         }
+
         .btn-social {
             flex: 1;
             display: flex;
@@ -107,25 +124,29 @@
             transition: var(--transition);
             text-decoration: none;
         }
+
         .btn-social:hover {
             background-color: var(--bg-primary);
             border-color: var(--primary);
             transform: scale(1.02);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
+
         .btn-social:active {
             transform: scale(0.98);
         }
+
         .btn-social img {
             width: 20px;
             height: 20px;
         }
     </style>
 </head>
+
 <body>
 
 
-    <!-- Login Form Section -->
+    <!-- Sign Up Form Section -->
     <section class="section">
         <div class="container">
             <div class="auth-container">
@@ -137,46 +158,63 @@
                     </div>
                 </div>
                 <div class="auth-header">
-                    <h1>Welcome Back</h1>
-                    <p class="text-muted">Sign in to access your saved articles and preferences.</p>
+                    <h1>Create an Account</h1>
+                    <p class="text-muted">Join the community to save and curate your favorite science essays.</p>
                 </div>
-                <form action="#" method="POST" id="login-form">
+                <form action="#" method="POST" id="signup-form">
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" class="form-control" required
+                            placeholder="Jane Smith">
+                    </div>
                     <div class="form-group">
                         <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" class="form-control" required placeholder="name@example.com">
+                        <input type="email" id="email" name="email" class="form-control" required
+                            placeholder="name@example.com">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" class="form-control" required placeholder="••••••••">
+                        <input type="password" id="password" name="password" class="form-control" required
+                            placeholder="Create a password">
                     </div>
-                    <div class="form-group" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
-                        <div style="display: flex; align-items: center; gap: 0.5rem;">
-                            <input type="checkbox" id="remember" name="remember">
-                            <label for="remember" style="margin-bottom: 0; font-weight: 400; cursor: pointer;">Remember me</label>
-                        </div>
-                        <a href="#" style="font-size: 0.875rem;">Forgot password?</a>
+                    <div class="form-group" style="margin-bottom: 2rem;">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" name="confirm-password" class="form-control"
+                            required placeholder="Confirm your password">
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+                    <div class="form-group"
+                        style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 2rem;">
+                        <input type="checkbox" id="terms" name="terms" required style="margin-top: 0.35rem;">
+                        <label for="terms"
+                            style="margin-bottom: 0; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
+                            I agree to the <a href="#" style="font-weight: 600; text-decoration: underline;">Terms of
+                                Service</a> and <a href="#"
+                                style="font-weight: 600; text-decoration: underline;">Privacy Policy</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
                 </form>
-                <div class="auth-divider">or sign in with</div>
+                <div class="auth-divider">or sign up with</div>
                 <div class="social-auth">
                     <button class="btn-social">
                         <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" alt="Google">
                         Google
                     </button>
                     <button class="btn-social">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg"
+                            alt="Facebook">
                         Facebook
                     </button>
                 </div>
                 <div class="auth-footer text-muted">
-                    Don't have an account? <a href="signup.html" style="font-weight: 600;">Sign up</a>
+                    Already have an account? <a href="login.html" style="font-weight: 600;">Login</a>
                 </div>
             </div>
         </div>
     </section>
 
 
-    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
+
 </html>
