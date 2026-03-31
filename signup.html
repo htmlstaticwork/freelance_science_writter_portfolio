@@ -47,26 +47,54 @@
 
         .auth-box-logo {
             font-family: var(--font-heading);
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary);
             text-decoration: none;
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .fixed-page-utils {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 2000;
+        }
+
+        .fixed-page-utils .theme-toggle,
+        .fixed-page-utils .rtl-toggle {
+            background-color: var(--bg-secondary);
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .fixed-page-utils .theme-toggle:hover,
+        .fixed-page-utils .rtl-toggle:hover {
+            transform: translateY(-2px);
+            border-color: var(--secondary);
+            background-color: var(--bg-primary);
         }
 
         .auth-box-logo img {
-            height: 24px;
+            height: 32px;
             width: auto;
-            margin-right: 8px;
-        }
-
-        .auth-box-toggles {
-            display: flex;
-            gap: 0.5rem;
         }
 
         .auth-header {
@@ -121,9 +149,9 @@
             align-items: center;
             justify-content: center;
             gap: 0.75rem;
-            padding: 0.75rem;
+            padding: 0.85rem 1.5rem;
             border: 1px solid var(--border-color);
-            border-radius: 50px;
+            border-radius: 12px;
             background: none;
             color: var(--text-main);
             font-family: var(--font-body);
@@ -155,16 +183,21 @@
 <body>
 
 
+    <div class="fixed-page-utils">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+            <i data-lucide="moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL View">
+            <i data-lucide="languages"></i>
+        </button>
+    </div>
+
     <!-- Sign Up Form Section -->
     <section class="section">
         <div class="container">
             <div class="auth-container">
                 <div class="auth-box-utils">
                     <a href="index.html" class="auth-box-logo"><img src="assets/images/logo.svg" alt="Logo"> SCI</a>
-                    <div class="auth-box-toggles">
-                        <button class="rtl-toggle" aria-label="Toggle RTL View"><i data-lucide="languages"></i></button>
-                        <button class="theme-toggle" aria-label="Toggle Dark Mode"><i data-lucide="moon"></i></button>
-                    </div>
                 </div>
                 <div class="auth-header">
                     <h1>Create an Account</h1>
@@ -201,7 +234,7 @@
                                 style="font-weight: 600; text-decoration: underline;">Privacy Policy</a>
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Create Account</button>
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem;">Create Account</button>
                 </form>
                 <div class="auth-divider">or sign up with</div>
                 <div class="social-auth">
