@@ -188,6 +188,19 @@
             width: 20px;
             height: 20px;
         }
+
+        .auth-container a:not(.auth-box-logo) {
+            color: var(--secondary);
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .auth-container a:not(.auth-box-logo):hover {
+            color: var(--primary);
+            text-decoration: underline;
+            opacity: 0.8;
+        }
     </style>
 </head>
 
@@ -231,7 +244,7 @@
                             <input type="checkbox" id="remember" name="remember">
                             <label for="remember" style="margin-bottom: 0; font-weight: 400; cursor: pointer; white-space: nowrap;">Remember me</label>
                         </div>
-                        <a href="#" style="font-size: 0.875rem; white-space: nowrap;">Forgot password?</a>
+                        <a href="#">Forgot password?</a>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem;">Sign In</button>
                 </form>
@@ -248,7 +261,7 @@
                     </button>
                 </div>
                 <div class="auth-footer text-muted">
-                    Don't have an account? <a href="signup.html" style="font-weight: 600;">Sign up</a>
+                     New to SCI? <a href="signup.html">Sign up</a>
                 </div>
             </div>
         </div>

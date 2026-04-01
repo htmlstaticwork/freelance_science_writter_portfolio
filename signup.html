@@ -188,6 +188,19 @@
             width: 20px;
             height: 20px;
         }
+
+        .auth-container a:not(.auth-box-logo) {
+            color: var(--secondary);
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .auth-container a:not(.auth-box-logo):hover {
+            color: var(--primary);
+            text-decoration: underline;
+            opacity: 0.8;
+        }
     </style>
 </head>
 
@@ -240,9 +253,8 @@
                         <input type="checkbox" id="terms" name="terms" required style="margin-top: 0.35rem;">
                         <label for="terms"
                             style="margin-bottom: 0; font-weight: 400; font-size: 0.95rem; cursor: pointer;">
-                            I agree to the <a href="#" style="font-weight: 600; text-decoration: underline;">Terms of
-                                Service</a> and <a href="#"
-                                style="font-weight: 600; text-decoration: underline;">Privacy Policy</a>
+                            I agree to the <a href="#">Terms of
+                                Service</a> and <a href="#">Privacy Policy</a>
                         </label>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem;">Create Account</button>
@@ -260,7 +272,7 @@
                     </button>
                 </div>
                 <div class="auth-footer text-muted">
-                    Already have an account? <a href="login.html" style="font-weight: 600;">Login</a>
+                    Already have an account? <a href="login.html">Login</a>
                 </div>
             </div>
         </div>
