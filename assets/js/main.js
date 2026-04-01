@@ -20,6 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Mobile Dropdown Toggle Logic
+    const dropdownBtns = document.querySelectorAll('.nav-dropbtn');
+    dropdownBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            if (window.innerWidth <= 1024) {
+                e.preventDefault();
+                const parent = btn.parentElement;
+                const dropdownContent = parent.querySelector('.nav-dropdown-content');
+                if (dropdownContent) {
+                    dropdownContent.classList.toggle('show');
+                    btn.classList.toggle('active-toggle');
+                }
+            }
+        });
+    });
+
     // --- Theme (Dark Mode) Logic ---
     const themeToggles = document.querySelectorAll('.theme-toggle');
     

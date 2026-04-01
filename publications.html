@@ -63,8 +63,16 @@
     <header class="header">
         <div class="container navbar">
             <a href="index.html" class="brand"><img src="assets/images/logo.svg" alt="Logo" class="brand-logo"> SCI</a>
+
             <nav class="nav-links">
-                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="index.html" class="nav-dropbtn">Home <i data-lucide="chevron-down"
+                            size="16"></i></a>
+                    <div class="nav-dropdown-content">
+                        <a href="index.html">Home 1 (Standard)</a>
+                        <a href="index2.html">Home 2 (Premium)</a>
+                    </div>
+                </div>
                 <a href="about.html">About</a>
                 <a href="articles.html">Articles</a>
                 <a href="publications.html" class="active">Publications</a>
@@ -73,12 +81,19 @@
             <a href="login.html" class="btn btn-outline mobile-only">Login</a>
             <a href="signup.html" class="btn btn-primary mobile-only">Sign up</a>
             </nav>
+
             <div class="nav-actions">
-                <button class="theme-toggle" aria-label="Toggle Dark Mode"><i data-lucide="moon"></i></button>
-                <button class="rtl-toggle" aria-label="Toggle RTL View"><i data-lucide="languages"></i></button>
+                <button class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i data-lucide="moon"></i>
+                </button>
+                <button class="rtl-toggle" aria-label="Toggle RTL View">
+                    <i data-lucide="languages"></i>
+                </button>
                 <a href="login.html" class="btn btn-outline">Login</a>
                 <a href="signup.html" class="btn btn-primary">Sign up</a>
-                <button class="mobile-menu-btn" aria-label="Menu"><i data-lucide="menu"></i></button>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <i data-lucide="menu"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -174,6 +189,17 @@
                     <a href="index.html" class="brand"><img src="assets/images/logo.svg" alt="Logo" class="brand-logo"> SCI</a>
                     <p style="color: #94a3b8; margin-top: 1rem; max-width: 300px;">Freelance science writer and editor
                         bridging the gap between scientific discovery and public understanding.</p>
+                    <div class="footer-socials" style="display: flex; gap: 1.5rem; margin-top: 1.5rem;">
+                        <a href="#" aria-label="Instagram" style="color: var(--secondary); transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook" style="color: var(--secondary); transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" aria-label="X (Twitter)" style="color: var(--secondary); transition: transform 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" /></svg>
+                        </a>
+                    </div>
                 </div>
                 <div>
                     <h4 class="mb-2">Explore</h4>
