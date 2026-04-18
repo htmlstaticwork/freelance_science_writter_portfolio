@@ -30,6 +30,18 @@ html.dark-mode .page-header {
   color: var(--text-main);
 }
 
+html.dark-mode .hero-bg-section,
+html.dark-mode .page-header-bg::before {
+  background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8));
+}
+
+html.dark-mode .hero-bg-section,
+html.dark-mode .page-header-bg {
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
 html.dark-mode .bg-light {
   background-color: var(--bg-secondary) !important;
 }
@@ -63,11 +75,16 @@ html.dark-mode .pub-logo:hover {
 }
 
 html.dark-mode .header {
+  background-color: #000000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
+html.dark-mode .nav-dropdown-content {
+  background-color: #000000;
+}
+
 html.dark-mode .nav-links.active {
-  background-color: var(--bg-secondary);
+  background-color: #000;
 }
 
 html.dark-mode .form-card {

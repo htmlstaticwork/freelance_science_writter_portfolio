@@ -187,7 +187,7 @@ img {
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--border-color);
   z-index: 1000;
-  transition: var(--transition);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .navbar {
@@ -362,7 +362,7 @@ html.dark-mode .glass-card {
 }
 
 .text-gradient {
-  background: linear-gradient(135deg, var(--secondary), #5eead4);
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -383,34 +383,48 @@ html.dark-mode .glass-card {
   color: var(--primary);
 }
 
-/* Hero Section */
-.hero {
-  padding: calc(var(--spacing-xl) * 1.2) 0 var(--spacing-xl);
+/* Hero Section - Home 1 (Redesign) */
+.hero-bg-section {
+  position: relative;
+  background: linear-gradient(rgba(15, 23, 42, 0.65), rgba(15, 23, 42, 0.65)), url('../images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect for premium feel */
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl) 0;
+  text-align: center;
+}
+
+.hero-center {
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
-  gap: 3rem;
+  width: 100%;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 800px;
+  max-width: 850px;
+  z-index: 2;
 }
 
-.hero-content h1 {
-  font-size: 3.5rem;
+.hero-bg-section h1 {
+  font-size: 4rem;
   margin-bottom: 1.5rem;
   line-height: 1.1;
+  color: #ffffff;
 }
 
-.hero-content p {
+.hero-bg-section p {
   font-size: 1.25rem;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2.5rem;
-  max-width: 680px;
+  max-width: 700px;
 }
 
 .hero-actions {
@@ -419,11 +433,62 @@ html.dark-mode .glass-card {
   justify-content: center;
 }
 
-.hero-image {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+.hero-bg-section .btn-outline {
+  border-color: #ffffff;
+  color: #ffffff;
 }
+
+.hero-bg-section .btn-outline:hover {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+/* Page Headers (Interior Pages) */
+.page-header {
+  position: relative;
+  padding: 8rem 0 4rem;
+  background-color: var(--bg-secondary);
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+}
+
+.page-header-bg {
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-header-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7));
+  z-index: 1;
+}
+
+.page-header-bg .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-header-bg h1 {
+  color: #ffffff;
+  font-size: 3.5rem;
+}
+
+.about-hero-bg { background-image: url('../images/about-hero.png'); }
+.articles-hero-bg { background-image: url('../images/articles-hero.png'); }
+.publications-hero-bg { background-image: url('../images/publications-hero.png'); }
+.blog-hero-bg { background-image: url('../images/blog-hero.png'); }
+.contact-hero-bg { background-image: url('../images/contact-hero.png'); }
 
 /* Generic Grid */
 .grid-2 {
@@ -846,7 +911,39 @@ html.dark-mode .newsletter-card {
 
 .theme-toggle:hover,
 .rtl-toggle:hover {
-  background: var(--bg-secondary);
+  background: rgba(13, 148, 136, 0.1);
+  color: var(--secondary);
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px) rotate(15deg);
+}
+
+.rtl-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.rtl-toggle:hover .rtl-text-icon {
+  background: var(--secondary);
+  color: #fff;
+  border-color: var(--secondary);
+}
+
+.theme-toggle i,
+.rtl-toggle .rtl-text-icon {
+  transition: all 0.3s ease;
+}
+
+.rtl-text-icon {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  border: 1.5px solid currentColor;
+  padding: 2px 5px;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 /* RTL Global Adjustments */

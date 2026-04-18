@@ -96,14 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateAllRTLIcons(isRTL) {
-        rtlToggles.forEach(btn => {
-            const icon = btn.querySelector('i');
-            if (icon) {
-                // You could flip the icon or change it, but standard globe for lang/RTL is fine
-                icon.setAttribute('data-lucide', 'languages');
-            }
-        });
-        if (typeof lucide !== 'undefined') lucide.createIcons();
+        // No longer updating icons as we use static "RTL" text icon
     }
 
     // --- Article Filtering Logic ---
