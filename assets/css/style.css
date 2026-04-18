@@ -926,7 +926,7 @@ html.dark-mode .newsletter-card {
 .rtl-toggle:hover .rtl-text-icon {
   background: var(--secondary);
   color: #fff;
-  border-color: var(--secondary);
+
 }
 
 .theme-toggle i,
@@ -940,7 +940,7 @@ html.dark-mode .newsletter-card {
   font-size: 0.75rem;
   line-height: 1.1;
   letter-spacing: 0.5px;
-  border: 1.5px solid currentColor;
+  border: none;
   padding: 2px 5px;
   border-radius: 4px;
   display: inline-block;

@@ -30,7 +30,10 @@ html.dark-mode .page-header {
   color: var(--text-main);
 }
 
-html.dark-mode .hero-bg-section,
+html.dark-mode .hero-bg-section {
+  background-image: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8)), url('../images/hero-bg.png');
+}
+
 html.dark-mode .page-header-bg::before {
   background: linear-gradient(rgba(2, 6, 23, 0.8), rgba(2, 6, 23, 0.8));
 }
