@@ -920,31 +920,14 @@ html.dark-mode .newsletter-card {
 }
 
 .rtl-toggle:hover {
-  transform: translateY(-2px);
-}
-
-.rtl-toggle:hover .rtl-text-icon {
-  background: var(--secondary);
-  color: #fff;
-
+  transform: translateY(-2px) rotate(-15deg);
 }
 
 .theme-toggle i,
-.rtl-toggle .rtl-text-icon {
+.rtl-toggle i {
   transition: all 0.3s ease;
 }
 
-.rtl-text-icon {
-  font-family: var(--font-body);
-  font-weight: 700;
-  font-size: 0.75rem;
-  line-height: 1.1;
-  letter-spacing: 0.5px;
-  border: none;
-  padding: 2px 5px;
-  border-radius: 4px;
-  display: inline-block;
-}
 
 /* RTL Global Adjustments */
 [dir="rtl"] {

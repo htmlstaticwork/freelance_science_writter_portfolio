@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function updateAllRTLIcons(isRTL) {
-        // No longer updating icons as we use static "RTL" text icon
+        if (typeof lucide !== 'undefined') lucide.createIcons();
     }
 
     // --- Article Filtering Logic ---
